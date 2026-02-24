@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-gray-50">
-    <header class="container mx-auto pt-15">
-        <h1 class="text-4xl font-bold pb-7">Job Application Tracker</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <header class="container mx-auto pt-15 px-5 md:px-2 lg:px-0">
+        <h1 class="text-3xl lg:text-4xl font-bold pb-7">Job Application Tracker</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
             <div class="shadow-sm rounded-lg p-5 space-y-3 bg-white">
                 <p class="text-xl">total</p>
                 <p id="totalCount" class="text-3xl font-bold">0</p>
@@ -27,7 +27,7 @@
         </div>
         <hr class="my-7.5 text-gray-300">
     </header>
-    <main class="container mx-auto pb-15">
+    <main class="container mx-auto pb-15 px-5 md:px-2 lg:px-0">
         <div class="flex justify-between">
             <h1 class="text-2xl font-bold pb-6">Available Jobs</h1>
             <p id="job-count">8 jobs</p>
@@ -47,18 +47,18 @@
          </section>
 
         <!-- all-card -->
-        <section id="all-card" class="space-y-10">
+        <section id="all-card" class="space-y-6 lg:space-y-10">
             <!-- card-1 -->
             <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
-                <div class="space-y-5">
-                    <div class="space-y-3">
+                <div class="space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
                         <h1 class="job-type text-2xl font-semibold">Mobile First Corp</h1>
-                        <p class="job-name text-xl font-medium text-black/50">React Native Developer</p>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">React Native Developer</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">Remote • Full-time • $130,000 - $175,000</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
-                        <p class="job-title text-lg">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <p class="job-title lg:text-lg">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
@@ -71,15 +71,15 @@
             </div>
             <!-- card-2 -->
             <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
-                <div class="space-y-5">
-                    <div class="space-y-3">
-                        <h1 class="job-type text-2xl font-semibold">Google</h1>
-                        <p class="job-name text-xl font-medium text-black/50">Frontend Developer</p>
+                <div class=" space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">WebFlow Agency</h1>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">Web Designer & Developer</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">Remote • Full-time • $150,000 - $190,000</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
-                        <p class="job-title text-lg">Develop modern UI using React and Tailwind.</p>
+                        <p class="job-title lg:text-lg">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
@@ -92,15 +92,15 @@
             </div>
             <!-- card-3 -->
             <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
-                <div class="space-y-5">
-                    <div class="space-y-3">
-                        <h1 class="job-type text-2xl font-semibold">Microsoft</h1>
-                        <p class="job-name text-xl font-medium text-black/50">Software Engineer</p>
+                <div class="space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">CloudFirst Inc</h1>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">Backend Developer</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">Hybrid • Full-time • $140,000 - $180,000</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
-                        <p class="job-title text-lg">Build scalable cloud applications</p>
+                        <p class="job-title lg:text-lg">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
@@ -113,15 +113,15 @@
             </div>
             <!-- card-4 -->
             <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
-                <div class="space-y-5">
-                    <div class="space-y-3">
-                        <h1 class="job-type text-2xl font-semibold">Amazon</h1>
-                        <p class="job-name text-xl font-medium text-black/50">Web Developer</p>
+                <div class="space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">DataViz Solutions</h1>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">Data Visualization Specialist</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">Onsite • Full-time • $120,000 - $160,000</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">Boston, MA • Full-time • $125,000 - $165,000</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
-                        <p class="job-title text-lg">Develop ecommerce platform features.</p>
+                        <p class="job-title lg:text-lg">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
@@ -134,15 +134,15 @@
             </div>
             <!-- card-5 -->
             <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
-                <div class="space-y-5">
-                    <div class="space-y-3">
-                        <h1 class="job-type text-2xl font-semibold">Facebook</h1>
-                        <p class="job-name text-xl font-medium text-black/50">React Developer</p>
+                <div class="space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">Innovation Labs</h1>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">UI/UX Engineer</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">Remote • Full-time • $135,000 - $170,000</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">Austin, TX • Full-time • $110,000 - $150,000</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
-                        <p class="job-title text-lg">Build social media interfaces.</p>
+                        <p class="job-title lg:text-lg">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
@@ -155,15 +155,15 @@
             </div>
             <!-- card-6 -->
             <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
-                <div class="space-y-5">
-                    <div class="space-y-3">
-                        <h1 class="job-type text-2xl font-semibold">Netflix</h1>
-                        <p class="job-name text-xl font-medium text-black/50">JavaScript Engineer</p>
+                <div class="space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">MegaCorp Solutions</h1>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">JavaScript Developer</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">Remote • Full-time • $145,000 - $185,000</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">New York, NY • Full-time • $130,000 - $170,00</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
-                        <p class="job-title text-lg" >Develop streaming platform features</p>
+                        <p class="job-title lg:text-lg" >Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
@@ -176,15 +176,15 @@
             </div>
             <!-- card-7 -->
             <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
-                <div class="space-y-5">
-                    <div class="space-y-3">
-                        <h1 class="job-type text-2xl font-semibold">Spotify</h1>
-                        <p class="job-name text-xl font-medium text-black/50">Frontend Engineer</p>
+                <div class="space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">StartupXYZ</h1>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">Full Stack Engineer</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">Hybrid • Full-time • $130,000 - $165,000</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">Remote • Full-time • $120,000 - $160,000</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
-                        <p class="job-title text-lg">Create music streaming UI.</p>
+                        <p class="job-title lg:text-lg">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included..</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
@@ -197,15 +197,15 @@
             </div>
             <!-- card-8 -->
             <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
-                <div class="space-y-5">
-                    <div class="space-y-3">
-                        <h1 class="job-type text-2xl font-semibold">Apple</h1>
-                        <p class="job-name text-xl font-medium text-black/50">UI Developer</p>
+                <div class="space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">TechCorp Industries</h1>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">Senior Frontend Developer</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">Onsite • Full-time • $155,000 - $195,000</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">San Francisco, CA • Full-time • $130,000 - $175,000</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
-                        <p class="job-title text-lg">Design modern user interfaces.</p>
+                        <p class="job-title lg:text-lg">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>

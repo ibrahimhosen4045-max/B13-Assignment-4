@@ -193,15 +193,15 @@ function renderInterview(){
         let div = document.createElement("div");
         div.className = 'cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg'
         div.innerHTML = `
-        <div class="space-y-5">
-                    <div class="space-y-3">
+        <div class="space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
                         <h1 class="job-type text-2xl font-semibold">${inter.jobType}</h1>
-                        <p class="job-name text-xl font-medium text-black/50">${inter.jobName}</p>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">${inter.jobName}</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">${inter.jobSelary}</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">${inter.jobSelary}</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 text-blue-500 uppercase font-medium rounded-md">${inter.apply}</p>
-                        <p class="job-title text-lg">${inter.jobTitle}</p>
+                        <p class="job-title lg:text-lg">${inter.jobTitle}</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
@@ -233,15 +233,15 @@ function renderrejected(){
         let div = document.createElement("div");
         div.className = 'cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg'
         div.innerHTML = `
-        <div class="space-y-5">
-                    <div class="space-y-3">
+        <div class="space-y-3.5 lg:space-y-5">
+                    <div class="space-y-2 lg:space-y-3">
                         <h1 class="job-type text-2xl font-semibold">${reject.jobType}</h1>
-                        <p class="job-name text-xl font-medium text-black/50">${reject.jobName}</p>
+                        <p class="job-name text-lg lg:text-xl font-medium text-black/50">${reject.jobName}</p>
                     </div>
-                    <p class="job-selary text-lg text-black/50">${reject.jobSelary}</p>
-                    <div class="flex flex-col items-start space-y-3">
+                    <p class="job-selary lg:text-lg text-black/50">${reject.jobSelary}</p>
+                    <div class="flex flex-col items-start space-y-2 lg:space-y-3">
                         <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 text-red-500 uppercase font-medium rounded-md">${reject.apply}</p>
-                        <p class="job-title text-lg">${reject.jobTitle}</p>
+                        <p class="job-title lg:text-lg">${reject.jobTitle}</p>
                     </div>
                     <div class="space-x-3">
                         <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
