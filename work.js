@@ -46,14 +46,21 @@ function toggling(id){
     if(id == "interview-filter-btn"){
         allCard.classList.add("hidden")
         filterSection.classList.remove("hidden")
+
         renderInterview();
+        jobCount.innerText = interViewList.length + " of " + allCard.children.length + " jobs";
+
     } else if (id == "All-filter-btn") {
         allCard.classList.remove("hidden")
         filterSection.classList.add("hidden")
+        jobCount.innerText = allCard.children.length + " jobs";
+
     } else if (id == "rejected-filter-btn"){
         allCard.classList.add("hidden")
         filterSection.classList.remove("hidden")
         renderrejected();
+
+        jobCount.innerText = rejectedList.length + " of " + allCard.children.length + " jobs"
     }
 }
 
@@ -89,6 +96,8 @@ mainContainer.addEventListener("click", function(event){
     calculateCount();
     if(currantStatus == "rejected-filter-btn"){
         renderrejected();
+        
+        jobCount.innerText = rejectedList.length + " of " + allCard.children.length + " jobs"
     }
     
     }
@@ -122,6 +131,8 @@ mainContainer.addEventListener("click", function(event){
 
     if(currantStatus == "interview-filter-btn"){
         renderInterview();
+
+        jobCount.innerText = interViewList.length + " of " + allCard.children.length + " jobs"
     }
 
     calculateCount();
