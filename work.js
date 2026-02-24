@@ -194,7 +194,7 @@ function renderInterview(){
     for(let inter of interViewList){
 
         let div = document.createElement("div");
-        div.className = 'cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg'
+        div.className = 'cards flex my-7 lg:my-10 p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg'
         div.innerHTML = `
         <div class="space-y-3.5 lg:space-y-5">
                     <div class="space-y-2 lg:space-y-3">
@@ -234,7 +234,7 @@ function renderrejected(){
     for(let reject of rejectedList){
 
         let div = document.createElement("div");
-        div.className = 'cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg'
+        div.className = 'cards flex my-7 lg:my-10 p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg'
         div.innerHTML = `
         <div class="space-y-3.5 lg:space-y-5">
                     <div class="space-y-2 lg:space-y-3">
