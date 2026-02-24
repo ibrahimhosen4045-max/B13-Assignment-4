@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-50">
+    <header class="container mx-auto pt-15">
+        <h1 class="text-4xl font-bold pb-7">Job Application Tracker</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="shadow-sm rounded-lg p-5 space-y-3 bg-white">
+                <p class="text-xl">total</p>
+                <p id="totalCount" class="text-3xl font-bold">0</p>
+            </div>
+            <div class="shadow-sm rounded-lg p-5 space-y-3 bg-white">
+                <p class="text-xl">Interview</p>
+                <p id="interviewCount" class="text-3xl font-bold text-green-500">0</p>
+            </div>
+            <div class="shadow-sm rounded-lg p-5 space-y-3 bg-white">
+                <p class="text-xl">Rejected</p>
+                <p id="rejectedCount" class="text-3xl font-bold text-red-500">0</p>
+            </div>
+        </div>
+        <hr class="my-7.5 text-gray-300">
+    </header>
+    <main class="container mx-auto">
+        <div class="flex justify-between">
+            <h1 class="text-2xl font-bold pb-6">Available Jobs</h1>
+            <p><span id="job-count">0</span> jobs</p>
+        </div>
+        <!-- filter-button -->
+        <section>
+            <div class="space-x-4 pb-6">
+                <button onclick="toggling('All-filter-btn')"  id="All-filter-btn" class="py-2 px-8 bg-blue-500 rounded-md shadow-md text-white">All</button>
+                <button onclick="toggling('interview-filter-btn')"  id="interview-filter-btn" class="py-2 px-3 bg-white rounded-md shadow-md">Interview</button>
+                <button onclick="toggling('rejected-filter-btn')"  id="rejected-filter-btn" class="py-2 px-3 bg-white rounded-md shadow-md">Rejected</button>
+            </div>
+        </section>
+
+        <!-- filterd-Section -->
+         <section id="filter-section" class="hidden">
+
+         </section>
+
+        <!-- all-card -->
+        <section id="all-card" class="space-y-10">
+            <!-- card-1 -->
+            <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
+                <div class="space-y-5">
+                    <div class="space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">Mobile First Corp</h1>
+                        <p class="job-name text-xl font-medium text-black/50">React Native Developer</p>
+                    </div>
+                    <p class="job-selary text-lg text-black/50">Remote • Full-time • $130,000 - $175,000</p>
+                    <div class="flex flex-col items-start space-y-3">
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
+                        <p class="job-title text-lg">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
+                        <button class="rejected-btn btn btn-soft btn-error text-lg border-red-400 uppercase">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="delet-btn btn rounded-full py-5.5 px-3 text-[16px]"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            <!-- card-2 -->
+            <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
+                <div class="space-y-5">
+                    <div class="space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">Google</h1>
+                        <p class="job-name text-xl font-medium text-black/50">Frontend Developer</p>
+                    </div>
+                    <p class="job-selary text-lg text-black/50">Remote • Full-time • $150,000 - $190,000</p>
+                    <div class="flex flex-col items-start space-y-3">
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
+                        <p class="job-title text-lg">Develop modern UI using React and Tailwind.</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
+                        <button class="rejected-btn btn btn-soft btn-error text-lg border-red-400 uppercase">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="delet-btn btn rounded-full py-5.5 px-3 text-[16px]"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            <!-- card-3 -->
+            <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
+                <div class="space-y-5">
+                    <div class="space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">Microsoft</h1>
+                        <p class="job-name text-xl font-medium text-black/50">Software Engineer</p>
+                    </div>
+                    <p class="job-selary text-lg text-black/50">Hybrid • Full-time • $140,000 - $180,000</p>
+                    <div class="flex flex-col items-start space-y-3">
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
+                        <p class="job-title text-lg">Build scalable cloud applications</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
+                        <button class="rejected-btn btn btn-soft btn-error text-lg border-red-400 uppercase">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="delet-btn btn rounded-full py-5.5 px-3 text-[16px]"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            <!-- card-4 -->
+            <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
+                <div class="space-y-5">
+                    <div class="space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">Amazon</h1>
+                        <p class="job-name text-xl font-medium text-black/50">Web Developer</p>
+                    </div>
+                    <p class="job-selary text-lg text-black/50">Onsite • Full-time • $120,000 - $160,000</p>
+                    <div class="flex flex-col items-start space-y-3">
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
+                        <p class="job-title text-lg">Develop ecommerce platform features.</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
+                        <button class="rejected-btn btn btn-soft btn-error text-lg border-red-400 uppercase">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="delet-btn btn rounded-full py-5.5 px-3 text-[16px]"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            <!-- card-5 -->
+            <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
+                <div class="space-y-5">
+                    <div class="space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">Facebook</h1>
+                        <p class="job-name text-xl font-medium text-black/50">React Developer</p>
+                    </div>
+                    <p class="job-selary text-lg text-black/50">Remote • Full-time • $135,000 - $170,000</p>
+                    <div class="flex flex-col items-start space-y-3">
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
+                        <p class="job-title text-lg">Build social media interfaces.</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
+                        <button class="rejected-btn btn btn-soft btn-error text-lg border-red-400 uppercase">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="delet-btn btn rounded-full py-5.5 px-3 text-[16px]"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            <!-- card-6 -->
+            <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
+                <div class="space-y-5">
+                    <div class="space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">Netflix</h1>
+                        <p class="job-name text-xl font-medium text-black/50">JavaScript Engineer</p>
+                    </div>
+                    <p class="job-selary text-lg text-black/50">Remote • Full-time • $145,000 - $185,000</p>
+                    <div class="flex flex-col items-start space-y-3">
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
+                        <p class="job-title text-lg" >Develop streaming platform features</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
+                        <button class="rejected-btn btn btn-soft btn-error text-lg border-red-400 uppercase">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="delet-btn btn rounded-full py-5.5 px-3 text-[16px]"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            <!-- card-7 -->
+            <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
+                <div class="space-y-5">
+                    <div class="space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">Spotify</h1>
+                        <p class="job-name text-xl font-medium text-black/50">Frontend Engineer</p>
+                    </div>
+                    <p class="job-selary text-lg text-black/50">Hybrid • Full-time • $130,000 - $165,000</p>
+                    <div class="flex flex-col items-start space-y-3">
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
+                        <p class="job-title text-lg">Create music streaming UI.</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
+                        <button class="rejected-btn btn btn-soft btn-error text-lg border-red-400 uppercase">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="delet-btn btn rounded-full py-5.5 px-3 text-[16px]"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            <!-- card-8 -->
+            <div class="cards flex p-6 bg-white shadow-sm justify-between rounded-lg hover:-translate-y-0.5 duration-200 hover:shadow-lg">
+                <div class="space-y-5">
+                    <div class="space-y-3">
+                        <h1 class="job-type text-2xl font-semibold">Apple</h1>
+                        <p class="job-name text-xl font-medium text-black/50">UI Developer</p>
+                    </div>
+                    <p class="job-selary text-lg text-black/50">Onsite • Full-time • $155,000 - $195,000</p>
+                    <div class="flex flex-col items-start space-y-3">
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">Not Applied</p>
+                        <p class="job-title text-lg">Design modern user interfaces.</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
+                        <button class="rejected-btn btn btn-soft btn-error text-lg border-red-400 uppercase">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <button  class="delet-btn btn rounded-full py-5.5 px-3 text-[16px]">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- interview card -->
+        <section id="interview-card" class="space-y-10 hidden"></section>
+
+        <!-- rejected card -->
+        <section id="rejected-card" class="space-y-10 hidden"></section>
+
+        <section id="no-jobs" class="hidden">
+            <div class="container mx-auto bg-white rounded-lg py-[111px] flex flex-col items-center gap-4 shadow-sm">
+                <img src="./jobs.png" alt="">
+                <h1 class="text-2xl font-medium">No jobs available</h1>
+                <p class="text-black/60">Check back soon for new job opportunities</p>
+            </div>
+        </section>
+    </main>
+    <script src="./work.js"></script>
+     
+</body>
+</html>
