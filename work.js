@@ -5,6 +5,7 @@ let currantStatus = "all";
 const totalCount = document.getElementById("totalCount");
 const interviewCount = document.getElementById("interviewCount");
 const rejectedCount = document.getElementById("rejectedCount")
+const jobCount = document.getElementById("job-count")
 
 const allCard = document.getElementById("all-card");
 const mainContainer = document.querySelector("main");
@@ -20,6 +21,8 @@ function calculateCount (){
     totalCount.innerText = allCard.children.length;
     interviewCount.innerText = interViewList.length;
     rejectedCount.innerText = rejectedList.length;
+
+    jobCount.innerText = allCard.children.length;
 
 }
 calculateCount();
