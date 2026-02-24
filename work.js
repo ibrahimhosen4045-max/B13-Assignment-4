@@ -160,21 +160,6 @@ mainContainer.addEventListener("click", function(event){
 
         calculateCount();
 
-        if(allCard.children.length === 0){
-        document.getElementById("no-jobs").classList.remove("hidden")
-        } else {
-        document.getElementById("no-jobs").classList.add("hidden")
-        }
-        if(interViewList.length === 0){
-        document.getElementById("no-jobs").classList.remove("hidden")
-        } else {
-        document.getElementById("no-jobs").classList.add("hidden")
-        }
-        if(rejectedList.length === 0){
-        document.getElementById("no-jobs").classList.remove("hidden")
-        } else {
-        document.getElementById("no-jobs").classList.add("hidden")
-        }
     }
     
 })
