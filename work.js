@@ -80,6 +80,8 @@ mainContainer.addEventListener("click", function(event){
     const jobTitle = parent.querySelector(".job-title").innerText
 
     parent.querySelector(".apply").innerHTML = "INTERVIEW"
+    parent.querySelector(".apply").classList.remove("text-red-500")
+    parent.querySelector(".apply").classList.add("text-blue-500")
 
     const carInfo = {
         jobType,
@@ -115,6 +117,8 @@ mainContainer.addEventListener("click", function(event){
         const jobTitle = parent.querySelector(".job-title").innerText
 
     parent.querySelector(".apply").innerHTML = "REJECTED"
+    parent.querySelector(".apply").classList.remove("text-blue-500")
+    parent.querySelector(".apply").classList.add("text-red-500")
 
     const carInfo = {
         jobType,
@@ -152,7 +156,24 @@ mainContainer.addEventListener("click", function(event){
         rejectedList = rejectedList.filter(item => item.jobType !== jobType)
 
         calculateCount();
+
+        if(allCard.children.length === 0){
+        document.getElementById("no-jobs").classList.remove("hidden")
+        } else {
+        document.getElementById("no-jobs").classList.add("hidden")
+        }
+        if(interViewList.length === 0){
+        document.getElementById("no-jobs").classList.remove("hidden")
+        } else {
+        document.getElementById("no-jobs").classList.add("hidden")
+        }
+        if(rejectedList.length === 0){
+        document.getElementById("no-jobs").classList.remove("hidden")
+        } else {
+        document.getElementById("no-jobs").classList.add("hidden")
+        }
     }
+    
 })
 
 function renderInterview(){
@@ -179,7 +200,7 @@ function renderInterview(){
                     </div>
                     <p class="job-selary text-lg text-black/50">${inter.jobSelary}</p>
                     <div class="flex flex-col items-start space-y-3">
-                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">${inter.apply}</p>
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 text-blue-500 uppercase font-medium rounded-md">${inter.apply}</p>
                         <p class="job-title text-lg">${inter.jobTitle}</p>
                     </div>
                     <div class="space-x-3">
@@ -219,7 +240,7 @@ function renderrejected(){
                     </div>
                     <p class="job-selary text-lg text-black/50">${reject.jobSelary}</p>
                     <div class="flex flex-col items-start space-y-3">
-                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 uppercase font-medium rounded-md">${reject.apply}</p>
+                        <p class="apply text-[17px] py-1.5 px-2 bg-blue-100 text-red-500 uppercase font-medium rounded-md">${reject.apply}</p>
                         <p class="job-title text-lg">${reject.jobTitle}</p>
                     </div>
                     <div class="space-x-3">
