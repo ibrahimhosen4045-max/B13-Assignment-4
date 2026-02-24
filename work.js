@@ -158,6 +158,15 @@ mainContainer.addEventListener("click", function(event){
 function renderInterview(){
     filterSection.innerHTML = ''
 
+    if(interViewList.length === 0){
+        document.getElementById("no-jobs").classList.remove("hidden");
+        filterSection.classList.add("hidden");
+        return;
+    } else {
+        document.getElementById("no-jobs").classList.add("hidden")
+        filterSection.classList.remove("hidden")
+    }
+
     for(let inter of interViewList){
 
         let div = document.createElement("div");
@@ -188,6 +197,15 @@ function renderInterview(){
 
 function renderrejected(){
     filterSection.innerHTML = ''
+
+    if(rejectedList.length === 0){
+        document.getElementById("no-jobs").classList.remove("hidden");
+        filterSection.classList.add("hidden");
+        return;
+    } else {
+        document.getElementById("no-jobs").classList.add("hidden")
+        filterSection.classList.remove("hidden")
+    }
 
     for(let reject of rejectedList){
 
