@@ -30,7 +30,7 @@
     <main class="container mx-auto pb-15 px-5 md:px-2 lg:px-0">
         <div class="flex justify-between">
             <h1 class="text-2xl font-bold pb-6">Available Jobs</h1>
-            <div class="flex gap-1">
+            <div class="flex gap-1 font-bold">
                 <p class="hidden"><span id="inter-job-count"> 0 </span> of </p>
                 <p class="hidden"><span id="reject-job-count"> 0 </span> of </p>
                 <p><span id="job-count-all"> 0 </span> jobs </p>
@@ -39,9 +39,9 @@
         <!-- filter-button -->
         <section>
             <div class="space-x-4 pb-6">
-                <button onclick="toggling('All-filter-btn')"  id="All-filter-btn" class="py-2 px-8 bg-blue-500 rounded-md shadow-md text-white">All</button>
-                <button onclick="toggling('interview-filter-btn')"  id="interview-filter-btn" class="py-2 px-3 bg-white rounded-md shadow-md">Interview</button>
-                <button onclick="toggling('rejected-filter-btn')"  id="rejected-filter-btn" class="py-2 px-3 bg-white rounded-md shadow-md">Rejected</button>
+                <button onclick="toggling('All-filter-btn')"  id="All-filter-btn" class="py-2 px-8 bg-blue-500 btn text-[16px] shadow-md text-white">All</button>
+                <button onclick="toggling('interview-filter-btn')"  id="interview-filter-btn" class="py-2 px-3 bg-white  shadow-md btn text-[16px]">Interview</button>
+                <button onclick="toggling('rejected-filter-btn')"  id="rejected-filter-btn" class="py-2 px-3 bg-white  shadow-md btn text-[16px]">Rejected</button>
             </div>
         </section>
 
@@ -149,7 +149,7 @@
                         <p class="job-title lg:text-lg">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                     </div>
                     <div class="space-x-3">
-                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">interview</button>
+                        <button class="interView-btn btn btn-soft btn-success text-lg uppercase border-green-500">Interview</button>
                         <button class="rejected-btn btn btn-soft btn-error text-lg border-red-400 uppercase">Rejected</button>
                     </div>
                 </div>

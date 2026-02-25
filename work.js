@@ -12,6 +12,7 @@ const rejectJobCount = document.getElementById("reject-job-count")
 const allCard = document.getElementById("all-card");
 const mainContainer = document.querySelector("main");
 const filterSection = document.getElementById("filter-section")
+const noJobs = document.getElementById("no-jobs")
 
 
 const allFilterBtn = document.getElementById("All-filter-btn")
@@ -31,6 +32,7 @@ function calculateCount (){
 }
 calculateCount();
 
+
 function toggling(id){
     allFilterBtn.classList.remove("bg-blue-500", "text-white")
     interviewFilterBtn.classList.remove("bg-blue-500", "text-white")
@@ -43,6 +45,7 @@ function toggling(id){
 
     const selected = document.getElementById(id);
     currantStatus = id;
+
 
     selected.classList.remove("bg-white", "text-black")
     selected.classList.add("bg-blue-500", "text-white")
@@ -60,6 +63,11 @@ function toggling(id){
         filterSection.classList.add("hidden")
         rejectJobCount.parentNode.classList.add("hidden")
         interJobCount.parentNode.classList.add("hidden")
+        noJobs.classList.add("hidden")
+
+        if(allCard.children.length === 0){
+            noJobs.classList.remove("hidden")
+        }
 
 
     } else if (id == "rejected-filter-btn"){
@@ -67,9 +75,10 @@ function toggling(id){
         filterSection.classList.remove("hidden")
         interJobCount.parentNode.classList.add("hidden")
         rejectJobCount.parentNode.classList.remove("hidden")
+
         renderrejected();
 
-    }
+    } 
 }
 
 mainContainer.addEventListener("click", function(event){
@@ -160,19 +169,34 @@ mainContainer.addEventListener("click", function(event){
 
         calculateCount();
 
+        if(allCard.children.length === 0){
+            noJobs.classList.remove("hidden");
+        }else{
+            noJobs.classList.add("hidden");
+        }
+
+        if(currantStatus == "interview-filter-btn"){
+            renderInterview();
+        }
+        else if (currantStatus == "rejected-filter-btn"){
+            renderrejected();
+        }
+
     }
     
 })
+
 
 function renderInterview(){
     filterSection.innerHTML = ''
 
     if(interViewList.length === 0){
-        document.getElementById("no-jobs").classList.remove("hidden");
+        noJobs.classList.remove("hidden");
         filterSection.classList.add("hidden");
         return;
     } else {
-        document.getElementById("no-jobs").classList.add("hidden")
+        noJobs.classList.add("hidden")
+        
         filterSection.classList.remove("hidden")
     }
 
@@ -208,11 +232,12 @@ function renderrejected(){
     filterSection.innerHTML = ''
 
     if(rejectedList.length === 0){
-        document.getElementById("no-jobs").classList.remove("hidden");
+        noJobs.classList.remove("hidden");
         filterSection.classList.add("hidden");
+        
         return;
     } else {
-        document.getElementById("no-jobs").classList.add("hidden")
+        noJobs.classList.add("hidden")
         filterSection.classList.remove("hidden")
     }
 
@@ -243,3 +268,4 @@ function renderrejected(){
         filterSection.appendChild(div)
     }
 }
+
